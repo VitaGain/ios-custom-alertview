@@ -415,12 +415,12 @@ CGFloat buttonSpacerHeight = 0;
     CGSize dialogSize = [self countDialogSize];
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
 
-    UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
-    if (UIInterfaceOrientationIsLandscape(interfaceOrientation) && NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_7_1) {
-        CGFloat tmp = keyboardSize.height;
-        keyboardSize.height = keyboardSize.width;
-        keyboardSize.width = tmp;
-    }
+    //UIInterfaceOrientation interfaceOrientation = [[UIApplication sharedApplication] statusBarOrientation];
+    //if (UIInterfaceOrientationIsLandscape(interfaceOrientation) && NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_7_1) {
+    //    CGFloat tmp = keyboardSize.height;
+    //    keyboardSize.height = keyboardSize.width;
+    //    keyboardSize.width = tmp;
+    //}
 
     [UIView animateWithDuration:0.2f delay:0.0 options:UIViewAnimationOptionTransitionNone
 					 animations:^{
